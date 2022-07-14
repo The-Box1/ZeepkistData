@@ -1,0 +1,24 @@
+{
+  "name": "zeepkist",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "prod": "yarn build && yarn cleanup-prod && yarn mv-prod",
+    "cleanup-prod": "rm -r /home/thebox/Services/Zeepkist/index.html /home/thebox/Services/Zeepkist/public/assets",
+    "mv-prod": "mv /home/thebox/Projects/Zeepkist/ui/dist/index.html /home/thebox/Services/Zeepkist && mv /home/thebox/Projects/Zeepkist/ui/dist/assets /home/thebox/Services/Zeepkist/public"
+  },
+  "dependencies": {
+    "@mantine/core": "^4.2.11",
+    "@mantine/hooks": "^4.2.11",
+    "@nanostores/preact": "^0.1.3",
+    "@types/react-lazy-load-image-component": "^1.5.2",
+    "nanostores": "^0.5.12",
+    "preact": "^10.8.2",
+    "react-lazy-load-image-component": "^1.5.4"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.3.0",
+    "vite": "^2.9.13"
+  }
+}
